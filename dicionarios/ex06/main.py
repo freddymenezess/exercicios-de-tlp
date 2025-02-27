@@ -23,7 +23,7 @@ for produto, preco in produtos.items():
     if precoProcurado in produtos.values():
         print(f"Produto: {produto.capitalize()} | Preço: {preco:,.2f}KZ")
         break
-    # Mostrando a mensagem caso ele não seja encontrado
+    # Mostrando a mensagem caso o preço não seja encontrado
     else:
         print("Nenhum produto com este preço!")
         break
