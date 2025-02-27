@@ -8,34 +8,39 @@ alunos = {
 medias = {}
 idades = []
 
-#Inserindo todas as idades numa lista
+# Inserindo todas as idades numa lista
 for dados in alunos.values():
     idades.append(dados["idade"])
 
-#Calculando a média das idades
+# Calculando a média das idades
 totalIdades = len(idades)
 somaIdades = sum(idades)
 mediaIdades = int(somaIdades/totalIdades)
 
-#Calculando a média das notas de cada um
+# Calculando a média das notas de cada um
 for nome, dados in alunos.items():
     notas = dados["notas"]
     medias[nome] = float(f"{sum(notas) / len(notas):.2f}")
 
-#Calculando a mediana das idades
+# Calculando a mediana das idades
 idades.sort()
+# Verificando o número de idades
 if totalIdades % 2 == 0:
+    # Caso seja par
     mediana = []
     primeiroIndice = totalIdades//2 - 1
     segundoIndice = totalIdades//2
     mediana.append(idades[primeiroIndice])
     mediana.append(idades[segundoIndice])
 else:
+    # Caso seja impar
     mediana = idades[totalIdades//2]
 
+# Mostrando na tela o os dados dos alunos
 for nome, dados in alunos.items():
     print(f"{nome}: {dados}")
 
+# Mostrando as médias
 print("\nMédia dos Alunos")
 for nome, media in medias.items():
     print(f"{nome}: {media}")
