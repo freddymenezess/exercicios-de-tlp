@@ -1,6 +1,6 @@
 #Criando o dicionário com os produtos
 produtos = {
-    "relogio": 25000,
+    "relógio": 25000,
     "carteira": 2000,
     "bolsa": 12000,
     "sapatos": 14000,
@@ -19,11 +19,12 @@ while True:
 
 # Iterando sobre os preços
 for produto, preco in produtos.items():
-    # Verificando um preço identico
-    if precoProcurado in produtos.values():
+    # Verificando se o preço é identico
+    if precoProcurado == preco:
         print(f"Produto: {produto.capitalize()} | Preço: {preco:,.2f}KZ")
         break
-    # Mostrando a mensagem caso o preço não seja encontrado
-    else:
-        print("Nenhum produto com este preço!")
-        break
+        
+# Mostrando a mensagem caso o preço não seja encontrado
+else:
+    print("Nenhum produto com este preço!")
+
