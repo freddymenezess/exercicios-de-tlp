@@ -9,7 +9,7 @@ produtos = {
 
 # Garantindo que o usuário digite um preço válido
 while True:
-    # Recebe o preço procurado caso seja um int
+    # Recebendo o preço procurado caso seja um int
     try:
         precoProcurado = int(input("Informe o preço do produto que deseja: "))
         break
@@ -21,7 +21,7 @@ while True:
 for produto, preco in produtos.items():
     # Verificando se o preço é identico
     if precoProcurado == preco:
-        print(f"Produto: {produto.capitalize()} | Preço: {preco:,.2f}KZ")
+        print(f"Produto: {produto.capitalize()} | Preço: {preco:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".") + "KZ")
         break
 
 # Mostrando a mensagem caso o preço não seja encontrado
