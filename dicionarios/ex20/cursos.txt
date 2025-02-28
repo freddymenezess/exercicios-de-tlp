@@ -1,3 +1,5 @@
-Informática: João, Armindo, Isabel, Augusto
-Mecânica: André, Jucília, Josemar, Armindo
-Construção Civíl: Felipe, André, Andrade, Correia
+informatica: João, Armindo, Isabel, Augusto
+mecanica: André, Jucília, Josemar, Armindo
+construcao civil: Felipe, André, Andrade, Correia
+tecnico de informacao: 
+financas:
