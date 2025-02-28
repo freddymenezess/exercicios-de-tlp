@@ -27,4 +27,3 @@ for produto, preco in produtos.items():
 # Mostrando a mensagem caso o preço não seja encontrado
 else:
     print("Nenhum produto com este preço!")
-
