@@ -24,4 +24,3 @@ match acao:
     case 3:
         # Listando os alunos de cada curso
         f.cursosAlunos()
-
