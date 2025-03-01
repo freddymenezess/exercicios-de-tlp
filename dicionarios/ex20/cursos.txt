@@ -1,5 +1,5 @@
 informatica: João, Armindo, Isabel, Augusto
 mecanica: André, Jucília, Josemar, Armindo
 construcao civil: Felipe, André, Andrade, Correia
-tecnico de informacao: 
+tecnico de ti:
 financas:
