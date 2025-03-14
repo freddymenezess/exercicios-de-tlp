@@ -26,8 +26,11 @@ def corrigirPalavra(palavra):
 def mostrarCursosAlunos():
     with open("cursos.txt", "r", encoding="utf-8") as arquivo:
         for linha in arquivo:
-            curso, alunos = linha.strip().split(": ")
-            return print(f"{corrigirPalavra(curso)}\n{alunos}\n")
+            curso, alunos = linha.split(":")
+            if not alunos:
+                print(f"{corrigirPalavra(curso)}\nNenhum aluno.\n")
+            else:
+                print(f"{corrigirPalavra(curso)}\n{alunos.strip()}\n")
 
 
 def mostrarCursos():
@@ -38,18 +41,7 @@ def mostrarCursos():
             print(corrigirPalavra(curso))
 
 
-def adicionarCurso():
-    from unidecode import unidecode
-
-    while True:
-        nomeNovoCurso = input("Digite o nome do curso: ")
-        if nomeNovoCurso.replace(" ", "").isalpha():
-            nomeCurso = unidecode(nomeNovoCurso.lower().strip())
-            break
-        else:
-            print("Nome do curso inválido! Tente novamente.")
-            continue
-
+def adicionarCurso(nomeCurso):
     cursos = []
     with open("cursos.txt", "r", encoding="utf-8") as arquivo:
         for linha in arquivo:
@@ -59,14 +51,3 @@ def adicionarCurso():
         else:
             with open("cursos.txt", "a", encoding="utf-8") as arquivo:
                 arquivo.write(f"{nomeCurso}: \n")
-
-
-def verificarOpcao():
-    while True:
-        try:
-            opcao = int(input("1. Adicionar Cursos\n2. Listar Cursos\n3. Listar alunos em cada curso\n"))
-            return opcao
-
-        except ValueError:
-            print("Opção inválida! Tente novamente.")
-            continue

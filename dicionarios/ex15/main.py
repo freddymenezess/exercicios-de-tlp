@@ -24,12 +24,13 @@ for nome, dados in alunos.items():
 
 # Calculando a mediana das idades
 idades.sort()
+
 # Verificando o número de idades
 if totalIdades % 2 == 0:
     # Caso seja par
     mediana = []
-    primeiroIndice = totalIdades//2 - 1
-    segundoIndice = totalIdades//2
+    primeiroIndice = totalIdades // (2 - 1)
+    segundoIndice = totalIdades // 2
     mediana.append(idades[primeiroIndice])
     mediana.append(idades[segundoIndice])
 else:
